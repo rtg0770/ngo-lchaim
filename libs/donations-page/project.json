@@ -1,0 +1,34 @@
+{
+  "name": "donations-page",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "donations-page/src",
+  "prefix": "lib",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:ng-packagr",
+      "options": {
+        "project": "donations-page/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "donations-page/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "donations-page/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "tsConfig": "donations-page/tsconfig.spec.json",
+        "polyfills": [
+          "zone.js",
+          "zone.js/testing"
+        ]
+      }
+    }
+  }
+}

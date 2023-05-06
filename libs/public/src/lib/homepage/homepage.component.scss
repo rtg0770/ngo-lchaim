@@ -1,0 +1,39 @@
+@import '../../../../styles/breakpoints', '../../../../styles/mixins';
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: top;
+  grid-gap: 20px;
+
+  > :nth-child(n) {
+    margin: 20px;
+  }
+
+  @include respond-to('medium') {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+img {
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+mat-card {
+  background-color: rgba($color: #7B00B6, $alpha: 0.2);
+}
+
+.image-title {
+  position: relative;
+}
+
+h2 {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 9;
+}
+mat-card-content {
+  margin: 0 5px 0 5px;
+}

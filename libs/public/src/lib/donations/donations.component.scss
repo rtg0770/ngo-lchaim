@@ -1,0 +1,31 @@
+@import '../../../../styles/breakpoints', '../../../../styles/mixins';
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: top;
+  grid-gap: 20px;
+
+  > :nth-child(n) {
+    margin: 20px;
+  }
+
+  > .wrap-image > .image-title > img {
+    max-width: 100%;
+  }
+
+  @include respond-to('medium') {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+.image-title {
+  position: relative;
+}
+
+h1 {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 9;
+}

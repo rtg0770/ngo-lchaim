@@ -1,0 +1,64 @@
+{
+  "name": "lchaim-nest",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/lchaim-nest/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "target": "node",
+        "compiler": "tsc",
+        "outputPath": "dist/apps/lchaim-nest",
+        "main": "apps/lchaim-nest/src/main.ts",
+        "tsConfig": "apps/lchaim-nest/tsconfig.app.json",
+        "assets": ["apps/lchaim-nest/src/assets"],
+        "isolatedConfig": true,
+        "webpackConfig": "apps/lchaim-nest/webpack.config.js"
+      },
+      "configurations": {
+        "development": {},
+        "production": {}
+      }
+    },
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "lchaim-nest:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "lchaim-nest:build:development"
+        },
+        "production": {
+          "buildTarget": "lchaim-nest:build:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/lchaim-nest/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/lchaim-nest/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,0 +1,25 @@
+@import '../../../../styles/breakpoints', '../../../../styles/mixins';
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: top;
+  grid-gap: 20px;
+  > :nth-child(n) {
+    margin: 20px;
+  }
+  > .wrap-image > .image-title > img {
+    max-width: 100%;
+  }
+  @include respond-to('medium') {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+::ng-deep {
+  .mat-mdc-card-content {
+    padding: 0 !important;
+  }
+}
+mat-card {
+  margin-top: 20px;
+}

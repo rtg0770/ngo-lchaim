@@ -1,0 +1,46 @@
+/* You can add global styles to this file, and also import other style files */
+@import './assets/my-theme';
+
+// Import Playfair Display font
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+// Import Montserrat font
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+// Define font-family for titles
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Playfair Display', serif;
+  color: #7B00B6;
+}
+
+h1, h2 {
+  font-size: 37px;
+  font-weight: 500;
+  color: #F7F6F9;
+  background-color: #440065;
+  border-radius: 20px 20px 0px 20px;
+  padding: 5px 20px;
+}
+
+// Define font-family for the rest of the content
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #160020;
+  color: #F7F6F9;
+}
+
+a {
+  text-decoration: none;
+  font-family: 'Montserrat';
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+}

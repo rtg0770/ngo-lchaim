@@ -1,0 +1,15 @@
+@import '../../../../libs/styles/breakpoints';
+@import '../../../../libs/styles/mixins';
+
+::ng-deep .master-detail-wrapper {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: "list" "detail";
+    >:nth-child(n){
+        padding: 4px 9px 3px 9px;
+    }
+    @include respond-to('large'){
+        grid-template-columns: 400px 1fr;
+        grid-template-areas: "list detail detail";
+    }
+}

@@ -1,0 +1,54 @@
+@import '../../../../../styles/breakpoints', '../../../../../styles/mixins';
+
+nav {
+  display: grid;
+  grid-auto-flow: row;
+  > a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+mat-sidenav-container {
+  height: calc(100vh - 72px);
+}
+.link-label {
+  display: block;
+  padding: 3px 9px 2px 9px;
+  min-width: 200px;
+}
+span.title {
+  padding: 4px 13px 3px 13px;
+}
+mat-toolbar {
+  height: 72px;
+  background-color: #3C0052;
+  display: grid;
+  grid-template-columns: 51px 1fr 163px;
+  grid-template-areas: "menu user logo";
+
+  > button {
+    grid-area: menu;
+  }
+  > .loggedUser {
+    grid-area: user;
+    min-width: 200px;
+  }
+  > .logo {
+    grid-area: logo;
+  }
+}
+mat-sidenav {
+  padding: 20px;
+  width: 78%;
+  @include respond-to('small'){
+    width: 65%;   
+  }
+  @include respond-to('medium'){
+    width: 25%;   
+  }
+  @include respond-to('large'){
+    width: 20%;   
+  }  
+}
