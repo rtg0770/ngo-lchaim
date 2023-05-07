@@ -104,7 +104,7 @@
 </mat-toolbar>
 
 <mat-sidenav-container>
-  <mat-sidenav #sidenav mode="side" opened="true">
+  <mat-sidenav #sidenav mode="side" opened="false">
     <nav>
       <a
         mat-button
@@ -143,5 +143,14 @@
       </a>
     </nav>
   </mat-sidenav>
-  <mat-sidenav-content><ng-content></ng-content></mat-sidenav-content>
+  <mat-sidenav-content
+    ><ng-content></ng-content>
+    <footer>
+      <p class="footer-text">L`Chaim, z.s. - made in 2023 with</p>
+      <mat-icon
+        aria-hidden="false"
+        aria-label="link icon"
+        svgIcon="heartbroken"
+      ></mat-icon></footer
+  ></mat-sidenav-content>
 </mat-sidenav-container>

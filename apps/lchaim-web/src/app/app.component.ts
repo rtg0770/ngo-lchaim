@@ -14,6 +14,10 @@ export class AppComponent{
     private domSanitizer: DomSanitizer,
     ) {
     this.matIconRegistry.addSvgIcon(
+      'heartbroken',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('/assets/icons/heart_broken_FILL0_wght200_GRAD0_opsz20 2.svg')
+    );
+    this.matIconRegistry.addSvgIcon(
       'menu',
       this.domSanitizer.bypassSecurityTrustResourceUrl('/assets/icons/menu_FILL0_wght200_GRAD0_opsz24.svg')
     );

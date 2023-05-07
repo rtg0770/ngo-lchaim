@@ -57,3 +57,10 @@ mat-sidenav {
 .nav-link {
   color: #F7F6F9 !important;
 }
+
+footer {
+  display: grid;
+  grid-template-columns: 1fr 51px;
+  position: sticky;
+  right: 0;
+}
