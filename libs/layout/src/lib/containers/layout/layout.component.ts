@@ -32,7 +32,7 @@ export class LayoutComponent implements OnInit {
   }
   ngOnInit(): void {
     this.user$ = this.authService.user$;
-    
+
     switch (true) {
       case window.location.href.includes('/auth/login'):
         this.sidenav.close();
@@ -46,12 +46,5 @@ export class LayoutComponent implements OnInit {
       default:
         break;
     }
-    /*
-      window.location.href.includes('/auth/login') ||
-      window.location.href.includes('/homepage') ||
-      window.location.href.includes('/services') ||
-      window.location.href.includes('/volunteers') ||
-      window.location.href.includes('/donations') ||
-      window.location.href.includes('/contacts')*/
   }
 }

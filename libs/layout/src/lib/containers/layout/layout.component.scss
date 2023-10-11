@@ -23,7 +23,7 @@ span.title {
 }
 mat-toolbar {
   height: 72px;
-  background-color: #3C0052;
+  background-color: #A080E1 !important;
   display: grid;
   grid-template-columns: 51px 1fr 163px;
   grid-template-areas: "menu user logo";
@@ -36,10 +36,12 @@ mat-toolbar {
     min-width: 100px;
   }
   > .logo {
+    text-align: right;
     grid-area: logo;
   }
 }
 mat-sidenav {
+  background-color: #443991;
   padding: 20px;
   width: 78%;
   
@@ -54,9 +56,9 @@ mat-sidenav {
   }  
 }
 
-.nav-link {
-  color: #F7F6F9 !important;
-}
+//.nav-link {
+//  color: #6EC2B4 !important;
+//}
 
 footer {
   display: grid;
